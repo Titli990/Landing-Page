@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+
+    <link rel="icon" type="image/png" href="image/logo1.png">
+
+    <!-- CONNECT CSS HERE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+
+            <div class="left-info">
+                <span class="phone">123 456 789</span>
+                <span class="email">university@gmail.com</span>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="hero">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="University Logo">
+            </div>
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+
+            <div class="left-text">
+                <h2>Welcome to the University</h2>
+                <div class="line"></div>
+
+                <h1>
+                    We are an online <br>
+                    platform to make learning
+                </h1>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="primary-btn">
+                        APPLY NOW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="#" class="secondary-btn">
+                        DOWNLOAD BROCHURE
+                        <i class="bi bi-download"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div class="form-box">
+                <h3>Register Now</h3>
+
+                <input type="text" placeholder="Name">
+
+                <div class="two">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                </div>
+
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+
+                <button class="send-btn">Send</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="programmes-section">
+
+        <div class="programmes-header">
+            <div class="text-area">
+                <h2>Explore Our <span>Programmes</span></h2>
+
+                <p>
+                    Discover a range of courses designed to build your skills, boost your
+                    confidence, and help you grow in your career. Choose the path that fits
+                    your goals and start learning with expert guidance.
+                </p>
+            </div>
+
+            <div class="arrows">
+                <button id="prev">&#8592;</button>
+                <button id="next">&#8594;</button>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel">
+            <div class="carousel-track">
+
+                <div class="card">
+                    <img src="image/img1.jpg">
+
+                    <div class="card-overlay">
+                        <h3>Undergraduate Program</h3>
+
+                        <ul class="card-points">
+                            <li>Industry-focused curriculum</li>
+                            <li>Experienced faculty</li>
+                            <li>Internship opportunities</li>
+                            <li>Career placement support</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-title">Undergraduate Program</div>
+                </div>
+
+                <div class="card">
+                    <img src="image/img1.jpg">
+
+                    <div class="card-overlay">
+                        <h3>Postgraduate Program</h3>
+
+                        <ul class="card-points">
+                            <li>Advanced specialization tracks</li>
+                            <li>Research-driven curriculum</li>
+                            <li>Industry collaboration projects</li>
+                            <li>Placement assistance</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-title">Postgraduate Program</div>
+                </div>
+
+
+                <div class="card">
+                    <img src="image/img1.jpg">
+
+                    <div class="card-overlay">
+                        <h3>Diploma Program</h3>
+
+                        <ul class="card-points">
+                            <li>Skill-based training</li>
+                            <li>Short-term certification</li>
+                            <li>Hands-on practical learning</li>
+                            <li>Career-focused modules</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-title">Diploma Program</div>
+                </div>
+
+
+                <div class="card">
+                    <img src="image/img1.jpg">
+
+                    <div class="card-overlay">
+                        <h3>PhD Program</h3>
+
+                        <ul class="card-points">
+                            <li>Advanced research opportunities</li>
+                            <li>Expert faculty guidance</li>
+                            <li>Publication support</li>
+                            <li>Global academic exposure</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-title">PhD Program</div>
+                </div>
+
+
+                <div class="card">
+                    <img src="image/img1.jpg">
+
+                    <div class="card-overlay">
+                        <h3>Online Courses</h3>
+
+                        <ul class="card-points">
+                            <li>Flexible learning schedule</li>
+                            <li>Industry-relevant topics</li>
+                            <li>Live & recorded sessions</li>
+                            <li>Certification on completion</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-title">Online Courses</div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const next = document.getElementById('next');
+        const prev = document.getElementById('prev');
+
+        let currentIndex = 0;
+
+        /* get real values */
+        function getValues() {
+            const cards = document.querySelectorAll('.card');
+            const card = cards[0];
+
+            if (!card) return null;
+
+            const style = window.getComputedStyle(card);
+            const cardWidth = card.offsetWidth + parseInt(style.marginRight || 0);
+
+            const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+
+            const maxIndex = cards.length - visibleCards;
+
+            return { cardWidth, maxIndex };
+        }
+
+        /* NEXT */
+        next.addEventListener('click', () => {
+            const data = getValues();
+            if (!data) return;
+
+            const { cardWidth, maxIndex } = data;
+
+            if (currentIndex >= maxIndex) {
+                currentIndex = 0; // loop back to start
+            } else {
+                currentIndex++;
+            }
+
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        });
+
+        /* PREVIOUS */
+        prev.addEventListener('click', () => {
+            const data = getValues();
+            if (!data) return;
+
+            const { cardWidth, maxIndex } = data;
+
+            if (currentIndex <= 0) {
+                currentIndex = maxIndex; // loop to end
+            } else {
+                currentIndex--;
+            }
+
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        });
+    </script>
+
+
+
+    <section class="eligibility-section">
+
+        <div class="eligibility-header">
+            <h2>Eligibility <span>Criteria</span> For Students</h2>
+        </div>
+
+        <div class="eligibility-grid">
+
+            <div class="eligibility-card">
+                <i class="bi bi-mortarboard eligibility-icon"></i>
+                <h3>Academic Qualification</h3>
+                <p>Applicants must have completed required academic qualifications from a recognized board or
+                    university.</p>
+            </div>
+
+            <div class="eligibility-card">
+                <i class="bi bi-pencil-square eligibility-icon"></i>
+                <h3>Entrance Examination</h3>
+                <p>Students must qualify entrance exams conducted by the university or national testing authorities.</p>
+            </div>
+
+            <div class="eligibility-card">
+                <i class="bi bi-percent eligibility-icon"></i>
+                <h3>Minimum Percentage</h3>
+                <p>A minimum percentage is required depending on the selected program and course specialization.</p>
+            </div>
+
+            <div class="eligibility-card">
+                <i class="bi bi-file-earmark-text eligibility-icon"></i>
+                <h3>Documentation</h3>
+                <p>Valid academic certificates, ID proof, and required documents must be submitted during admission.</p>
+            </div>
+
+            <div class="eligibility-card">
+                <i class="bi bi-person-check eligibility-icon"></i>
+                <h3>Interview / Assessment</h3>
+                <p>Some programs may require personal interviews, portfolio reviews, or skill-based assessments.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="highlights-section">
+
+        <div class="highlights-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="highlights-left">
+                <h2>
+                    University’s
+                    <span>Key Highlights in Numbers</span>
+                </h2>
+
+                <p>
+                    Explore the impactful journey of Indus University through numbers that
+                    reflect our excellence, growth, achievements and take us among the top
+                    universities.
+                </p>
+
+                <button class="enroll-btn">Enroll Now</button>
+            </div>
+
+            <!-- RIGHT STATS -->
+            <div class="highlights-right">
+
+                <div class="stat">
+                    <h3 class="count" data-target="2000">0</h3>
+                    <p>Alumni Networks</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="count" data-target="300">0</h3>
+                    <p>Qualified Teachers</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="count" data-target="500">0</h3>
+                    <p>Honour & Awards Win</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="count" data-target="300">0</h3>
+                    <p>Qualified Teachers</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script id="count_js">
+        const counters = document.querySelectorAll('.count');
+
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+
+            let count = 0;
+            const speed = target / 120;
+
+            const updateCount = () => {
+                if (count < target) {
+                    count += speed;
+                    counter.innerText = Math.ceil(count) + "+";
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+
+
+
+    <section class="career-section">
+
+        <div class="career-heading">
+            <!-- <div class="career-dot"></div> -->
+            <h2>Study careers</h2>
+        </div>
+
+        <div class="career-line"></div>
+        <p class="career-subtitle">Explore the different careers after B.Tech</p>
+
+        <div class="career-grid">
+
+            <div class="career-card career-admin">
+                <img src="image/img11.jpg">
+                <div class="career-overlay">
+                    <h3>Corporate Jobs</h3>
+
+                </div>
+            </div>
+
+            <div class="career-card career-accounting">
+                <img src="image/img12.jpg">
+                <div class="career-overlay">
+                    <h3>Core Engineering Sectors</h3>
+
+                </div>
+            </div>
+
+            <div class="career-card career-maths">
+                <img src="image/img13.jpg">
+                <div class="career-overlay">
+                    <h3>PSUs & Government</h3>
+
+                </div>
+            </div>
+
+            <div class="career-card career-programming">
+                <img src="image/img14.jpg">
+                <div class="career-overlay">
+                    <h3>Administrative & Banking</h3>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="recruiters">
+
+        <div class="recruiters-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="recruiters-text">
+                <h2>Our Recruiters</h2>
+                <p>
+                    Our students are placed in top global companies through strong industry
+                    partnerships and career support.
+                </p>
+            </div>
+
+            <!-- RIGHT CAROUSELS -->
+            <div class="recruiters-logos">
+
+                <!-- Row 1 -->
+                <div class="logo-row left-scroll">
+                    <div class="logo-track">
+                        <img src="image/google.png">
+                        <img src="image/apple.png">
+                        <img src="image/microsoft.png">
+                        <img src="image/adobe.png">
+                        <img src="image/flipkart.png">
+                        <!-- duplicate for loop -->
+                        <img src="image/google.png">
+                        <img src="image/apple.png">
+                        <img src="image/microsoft.png">
+                        <img src="image/adobe.png">
+                        <img src="image/flipkart.png">
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="logo-row right-scroll">
+                    <div class="logo-track">
+                        <img src="image/infosys.png">
+                        <img src="image/tcs.png">
+                        <img src="image/wipro.png">
+                        <img src="image/ibm.png">
+                        <img src="image/sap.png">
+                        <!-- duplicate -->
+                        <img src="image/infosys.png">
+                        <img src="image/tcs.png">
+                        <img src="image/wipro.png">
+                        <img src="image/ibm.png">
+                        <img src="image/sap.png">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="apply-section">
+
+        <div class="apply-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="apply-content">
+                <h2>Apply To <br><span>Our Program Today</span></h2>
+
+                <p>
+                    Take the first step towards a brighter future by joining our esteemed program.
+                    Our comprehensive curriculum and dedicated faculty are here to support your
+                    academic and career aspirations every step of the way.
+                </p>
+                <p>Applications for 2026 intake are now open.</p>
+
+                <a href="#" class="apply-btn">Enroll Now</a>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="apply-image">
+                <img src="image/university.jpg" alt="University Campus">
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+<footer class="main-footer">
+
+    <div class="footer-bottom">
+
+        <p class="copyright">
+            © 2026 Your University. All rights reserved.
+        </p>
+
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+</footer>
+
+</html>
